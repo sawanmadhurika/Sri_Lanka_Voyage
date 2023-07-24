@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Sri Lanka,Voyage,Travel,Trip,Itinerary,Destination,Best Places to visit in Sri Lanka,Sri Lanka tourist attractions, Sri Lanka travel experiences,Sri Lanka culture and history,Sri Lanka beaches,Sri Lanka wildlife,Sri Lanka cuisine,Sri Lanka landmarks,Sri Lanka UNESCO sites,Travel web sites,Vacation,Sri Lanakan heritage ">
+    <title>Sri Lanka Voyage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+       
+ <style>
+ 
+ * {
+    padding:0;
+    margin:0;
+    box-sizing:border;
+    font-family:'Poppins',sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+/* Home page */
+
+.banner {
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(1, 0, 5, 0.3),rgba(4, 1, 17, 0.3));
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(21, 74, 74);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 100px;
+    margin: 2vh;
+    margin-left: 8%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 4vh;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;   
+    text-decoration: none;
+    transition: ease 0.40s;
+}
+
+.navbar a:hover,.navbar a.active {
+    background: white;
+    color: black;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+.title{
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
+    padding: 14px 17px;
+    margin-top: 32vh;
+    text-align: center;
+    vertical-align: center;
+}
+
+/* Title */
+
+.title h1{
+    font-size: 10vh;
+    text-shadow: 2px black;
+    transition: ease 0.3s;
+}
+
+.title h1:hover{
+    color:transparent;
+    -webkit-text-stroke: 1px white; 
+}
+
+/* Intro */
+
+.text h2{
+    font-size: 40px;
+    font-weight: 650;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+}
+
+p {
+ margin-bottom: 30px;
+}
+
+
+/* Locations */
+
+.location-content {
+    display:flex;
+	justify-content: space-around;
+	flex-wrap:wrap;
+}
+
+.locations-title{
+    text-align: center;
+	font-size:25px;
+	margin-top:35px;
+	margin-bottom:35px;
+}
+
+.loc-content{
+    position: relative;
+    filter:brightness(95%);
+    transition: all 0.3s cubic-bezier(0.445,0.05,0.55,0.95);
+}
+
+.loc-content img{
+    margine-bottom:40px;
+    border-radius:27px;
+    width:100%;
+    height:500px;
+}
+
+.loc-content h5{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    left: 20px;
+    bottom: 45px;
+    cursor: pointer;
+}
+
+.loc-content:hover{
+    filter: brightness(120%);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Heritage */
+
+.heritage-title{
+    text-align: center;
+	font-size:25px;
+	margin-top:35px;
+	margin-bottom:35px;
+}
+
+.heritage-content{
+    display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.heritage-content{
+    position: relative;
+    filter:brightness(95%);
+    transition: all 0.3s cubic-bezier(0.445,0.05,0.55,0.95);
+
+}
+
+.heritage-content img{
+    margin-bottom: 40px;
+	width: 100%;
+    height: 500px;
+    border-radius: 27px; 
+}
+
+.heritage-content h5{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    left: 20px;
+    bottom: 45px;
+    cursor: pointer;
+}
+
+
+.heritage-content:hover{
+    filter: brightness(120%);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+
+/* Map */
+
+.map-title{
+    text-align: center;
+	font-size:25px;
+	margin-top:35px;
+	margin-bottom:35px;
+}
+
+
+.map img{
+	align: center;
+	border-radius: 27px;
+}
+
+/* Footer */
+
+.footer{
+    margin-top: 80px;
+    background-color: rgb(21, 74, 74);
+}
+
+.foot{
+    padding: 20px 0;
+}
+
+.end{
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 12px;
+}
+
+.end p{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+ 
+   </style>
+   
+   
+   
+</head>
+<body>
+
+<!-- Background Video & Header -->
+
+    <div class="banner">
+        <video src="videos/vid1.mp4" type="video/mp4" autoplay muted loop></video>
+    
+    <!-- Header -->
+
+    <div class="content" id="home"> 
+        <nav>
+            <img src="img/logo.png" class="logo" alt="Logo" title="Sri Lanka Voyage">
+            
+            <ul class="navbar">
+                <li>
+                    <a href="#home">Home</a>
+                    <a href="#locations">Locations</a>
+                    <a href="#heritage">Heritage</a>
+                    <a href="#map">Map</a>
+                </li>
+            </ul>
+        </nav>
+ 
+        <div class="title">
+            <h1>Sri Lanka Voyage</h1>
+            <p>Discover the Paradise Isle, Where Serenity Meets Adventure!</p>
+        </div>
+        </div>
+    </div>
+	
+	
+<!-- Introduction -->
+
+<section class="container">
+    <div class="text">
+        <h2>SRI LANKA</h2>
+		 <center>
+		<p> Welcome to Sri Lanka a tropical paradise nestled in the Indian Ocean! <br> Known for its diverse landscapes, rich cultural heritage, and warm hospitality, Sri Lanka offers an enchanting experience for every traveler. This tear-shaped island with thousands of years of history is a treasure trove of wonders, where ancient cities, lush jungles, pristine beaches, and misty mountains coexist harmoniously. </p>
+		 </center>
+    </div>
+</section>	
+	
+<!-- Locations -->
+
+<section class="locations" id="locations">
+    <div class="locations-title">
+        <h2>Locations</h2>
+    </div>
+
+    <div class="location-content">
+        
+		<!--ref--->
+		<div class="loc-content">
+        <a href="ancient_cities.html">
+		    <img src="img/ac7.jpg"> 
+            <h5>Ancient Cities</h5>
+         </div></a>
+
+        <div class="loc-content">
+        <a href="beaches.html">
+            <img src="img/beach3.jpg">
+            <h5>Beaches</h5>
+        </div></a>
+
+        <div class="loc-content">
+        <a href="cultural.html">
+            <img src="img/cul2.jpg" alt="">
+            <h5>Cultural</h5>
+        </div></a>
+
+        <div class="loc-content">  
+        <a href="religious.html">
+            <img src="img/rel3.jpg" alt="">
+            <h5>Religious</h5>
+        </div></a>
+		
+		
+        <div class="loc-content">
+        <a href="wild_life.html">
+            <img src="img/wl6.jpg" alt="">
+            <h5>Wild Life</h5>
+        </div></a>
+
+        <div class="loc-content">
+        <a href="central_highlands.html">
+            <img src="img/ch7.jpg" alt="">
+            <h5>Central Highlands</h5>
+        </div></a>
+
+        <div class="loc-content">
+        <a href="adventure.html">
+            <img src="img/ad5.jpg" alt="">
+            <h5>Adventure</h5>
+        </div></a>
+    </div>
+</section>
+
+<!-- Heritage -->
+
+<section class="heritage" id="heritage">
+    <div class="heritage-title">
+        <h2>Heritage</h2>
+    </div>
+
+
+    <div class="heritage-content">
+        
+		<!--ref--->
+        <a href="cuisines.html"><div class="heritage-content">
+		    <img src="img/cus6.jpg" "widht=100%" "height=500px">
+            <h5>Sri Lankan Cuisines </h5>
+         </div></a>
+
+       
+        <a href="festivals.html"><div class="heritage-content">
+            <img src="img/fes6.jpg" "widht=100%" "height=500px">
+            <h5>Festivals</h5>
+        </div></a>
+
+        <a href="art&craft.html"><div class="heritage-content">
+            <img src="img/art5.jpg" "widht=100%" "height=500px">
+            <h5>Art & Craft</h5>
+        </div></a>
+
+
+        <a href="tea.html"><div class="heritage-content">
+            <img src="img/tea2.jpg" "widht=100%" "height=500px">
+            <h5>Tea</h5>
+        </div></a>
+ 
+
+
+        <a href="jaffna.html"><div class="heritage-content">
+            <img src="img/jf4.jpg" "widht=100%" "height=500px">
+            <h5>Jaffna</h5>
+        </div></a>
+
+    </div>
+</section>
+
+<!-- Map -->
+
+<section class="map" id="map">
+    
+	<div class="map-title">
+        <h2>Map of Sri Lanka</h2>
+    </div>
+	
+	 <div class="map-img">
+	    <center>
+        <a href="map.html"> <img src="img/map.jpg" alt="Sri Lankan Map"> 
+		</center>
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<section class="footer">
+    <div class="end">
+        <p>Copyright © 2023 Sri Lanka Voyage All Rights Reserved</p>
+    </div>
+</section>
+
+
+ 
+</body>
+</html>
